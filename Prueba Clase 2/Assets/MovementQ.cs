@@ -20,6 +20,7 @@ public class MovementQ : MonoBehaviour
 
         //Movimineto
         Vector3 forwardMovement = transform.forward * verticalInput * moveSpeed * Time.deltaTime;
+        rb.MovePosition(rb.position + forwardMovement);
 
         //rotacion
         float rotationAmount = horizontalInput * rotationSpeed * Time.deltaTime;
